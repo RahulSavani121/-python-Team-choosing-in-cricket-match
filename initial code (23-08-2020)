@@ -1,0 +1,30 @@
+import random
+
+teams=[]
+team1=input("Enter teams ~~ ")
+team2=input("and ~~ ")
+teams.append(team1)
+teams.append(team2)
+print()
+
+toss_count=int(input("how many toss you want to flip ?  ~~ "))
+print()
+
+A, I = 0, 0
+
+for i in range(toss_count):
+    #print(random.choice(teams))
+    a=random.choice(teams)
+    if a == teams[1]:
+    	A+=1
+    else:
+    	I+=1
+
+if A<I:
+    print(f"{teams[0]} won the toss by {I} times from {toss_count} tries.")
+
+elif I<A:
+    print(f"{teams[1]} won the toss by {A} times from {toss_count} tries.")
+
+else:
+	print("Tie")
